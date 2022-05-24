@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>COVID19 Chatbot Assistant</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/styles.css') }}">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</head>
+<body>
+    <center><h1>COVID19 Chatbot Assistant</h1></center>
+    <br /><br /><br />
+    <div class="chaticon">
+        <img src="{{url_for('static', filename='images/user.png')}}" width="35" height="35"/>
+    </div>
+    <div class="chat left">
+        
+        <form action="{{ url_for('home')}}" method="post" id="input-form">
+           
+            <label for="question"><strong>User:</strong></label>
+            <input type="text" id="question" name="question" size="38" onchange='saveValue(this);'>
+            <div class="chaticon">
+                <input type="image" src="{{url_for('static', filename='images/send.png')}}" alt="Submit" width="25" height="25">
+            </div>   
+        </form>
+    </div>
+    
+    <br /> <br /><br /><br />
+    <div class="chat right">
+        <label for="firstname"><strong>Chatbot:</strong></label>
+            {{answer}}
+    </div>
+    <div class="chaticon">
+        <img src="{{url_for('static', filename='images/chatbot.png')}}" width="35" height="35"/>
+    </div>
+    
+</body>
+</html>
