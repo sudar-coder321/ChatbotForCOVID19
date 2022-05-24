@@ -1,6 +1,6 @@
 # COVID-19 Chatbot
 
-A chatbot for the new coronavirus (COVID-19) based on frequently asked questions from the WHO. 
+A chatbot for COVID-19 based on frequently asked questions from the WHO. 
 
 The WHO provides answers to frequently asked question regarding the coronavirus. The implementiation of the chatbot is peformed in Python with a dataset which was gathered from the WHO: https://www.who.int/news-room/q-a-detail/q-a-coronaviruses
 
